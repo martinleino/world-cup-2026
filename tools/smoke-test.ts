@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // In-process smoke test for the World Cup 2026 tracker engine.
-// Run with: node --experimental-strip-types tools/smoke-test.ts
+// Run with: npx tsx tools/smoke-test.ts
 
-import { GROUPS, GROUP_FIXTURES, KNOCKOUT_FIXTURES } from "../lib/tournament-data.ts";
-import { computeSnapshot } from "../lib/knockouts.ts";
-import { assignThirdPlaceSlots } from "../lib/third-place.ts";
-import type { AppState, GroupResult } from "../lib/types.ts";
+import { GROUPS, GROUP_FIXTURES, KNOCKOUT_FIXTURES } from "../lib/tournament-data";
+import { computeSnapshot } from "../lib/knockouts";
+import { assignThirdPlaceSlots } from "../lib/third-place";
+import type { AppState, GroupResult } from "../lib/types";
 
 let failed = 0;
 function check(label: string, cond: boolean, detail?: string) {
